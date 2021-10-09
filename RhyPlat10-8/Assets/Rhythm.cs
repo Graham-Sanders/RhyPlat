@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class Rythm : ScriptableObject
+public class Rhythm : ScriptableObject
 {
     public AudioClip clip;
     public int firstBeat;
-    public int bpn;
+    public int bpm;
 }
