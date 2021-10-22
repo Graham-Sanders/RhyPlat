@@ -10,8 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 413a15c15dc73478191feefce9dd1d29, type: 3}
-  m_Name: Music
+  m_Name: New Rhythm
   m_EditorClassIdentifier: 
+<<<<<<< HEAD:RhyPlat10-8/Assets/Music.asset
   clip: {fileID: 8300000, guid: 4ff959d0594ac420cb7b20cbaf44b4a8, type: 3}
   firstBeat: 0
   bpm: 120
+=======
+  clip: {fileID: 0}
+  firstBeat: 2
+  bpn: 4
+>>>>>>> parent of 4e66d057 (Added Disappearing and Reappearing plat):RhyPlat10-8/Assets/New Rhythm.asset
