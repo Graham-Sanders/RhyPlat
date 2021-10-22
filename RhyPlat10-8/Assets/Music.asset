@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Music
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 4ff959d0594ac420cb7b20cbaf44b4a8, type: 3}
-  firstBeat: 1
+  firstBeat: 0
   bpm: 120

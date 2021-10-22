@@ -28,7 +28,7 @@ public class RhythmManager : MonoBehaviour
         //onBeat.Invoke((int)Time.time);
         if (beathold != beatTime)
         {
-            onBeat.Invoke((int)beatTime);
+            onBeat.Invoke(beatTime);
             beathold = beatTime;
         }
     }
