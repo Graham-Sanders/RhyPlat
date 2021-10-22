@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 413a15c15dc73478191feefce9dd1d29, type: 3}
-  m_Name: New Rhythm
+  m_Name: Music
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
-  firstBeat: 2
-  bpn: 4
+  clip: {fileID: 8300000, guid: 4ff959d0594ac420cb7b20cbaf44b4a8, type: 3}
+  firstBeat: 1
+  bpm: 120

@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class RhythmManager : MonoBehaviour
 {
     public Rhythm beat;
+    public int beathold;
     AudioSource source;
     public UnityEvent<int> onBeat = new UnityEvent<int>();
 
@@ -25,7 +26,10 @@ public class RhythmManager : MonoBehaviour
         int beatTime = (int) ((source.time - beat.firstBeat) % (beat.bpm / 60)) /
             ((beat.bpm / 60) - 1);
         //onBeat.Invoke((int)Time.time);
-        onBeat.Invoke((int)beatTime);
-
+        if (beathold != beatTime)
+        {
+            onBeat.Invoke((int)beatTime);
+            beathold = beatTime;
+        }
     }
 }
