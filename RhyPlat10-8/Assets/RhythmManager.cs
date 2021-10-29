@@ -24,16 +24,13 @@ public class RhythmManager : MonoBehaviour
     {
         int beatTime = (int) ((source.time - beat.firstBeat) % (beat.bpm / 60)) /
             ((beat.bpm / 60) - 1);
+        int beathold = beatTime;
         //onBeat.Invoke((int)Time.time);
-<<<<<<< HEAD
         if (beathold != beatTime)
         {
             onBeat.Invoke(beatTime);
             beathold = beatTime;
         }
-=======
         onBeat.Invoke((int)beatTime);
-
->>>>>>> parent of 4e66d057 (Added Disappearing and Reappearing plat)
     }
 }
