@@ -12,7 +12,7 @@ public class Platform : MonoBehaviour
 
     public void OnBeat(int beat)
     {
-        if(beat != 1);
+        //if(beat != 1);
     }
     
 }
