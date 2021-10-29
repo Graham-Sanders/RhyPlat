@@ -12,7 +12,7 @@ public class RhythmManager : MonoBehaviour
 
     public static RhythmManager instance;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         instance = this;
         source = GetComponent<AudioSource>();
@@ -25,7 +25,7 @@ public class RhythmManager : MonoBehaviour
     {
         int beatTime = (int)((source.time - beat.firstBeat) % (beat.bpm / 60)) /
             ((beat.bpm / 60) - 1);
-        //onBeat.Invoke((int)Time.time);
+        
         if (beathold != beatTime)
         {
             onBeat.Invoke((int)beatTime);
