@@ -6,14 +6,10 @@ using UnityEngine.SceneManagement;
 public class ButtonScripts : MonoBehaviour
 {
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    public void Button_Play()
+    public void Button_Use(int scene)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(scene);
     }
 
     public void Button_exit()
