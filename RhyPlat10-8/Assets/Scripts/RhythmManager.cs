@@ -6,12 +6,13 @@ using UnityEngine.Events;
 public class RhythmManager : MonoBehaviour
 {
     public Rhythm beat;
+    public int beathold;
     AudioSource source;
     public UnityEvent<int> onBeat = new UnityEvent<int>();
 
     public static RhythmManager instance;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         instance = this;
         source = GetComponent<AudioSource>();
@@ -22,15 +23,13 @@ public class RhythmManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int beatTime = (int) ((source.time - beat.firstBeat) % (beat.bpm / 60)) /
+        int beatTime = (int)((source.time - beat.firstBeat) % (beat.bpm / 60)) /
             ((beat.bpm / 60) - 1);
-        int beathold = beatTime;
-        //onBeat.Invoke((int)Time.time);
+
         if (beathold != beatTime)
         {
-            onBeat.Invoke(beatTime);
+            onBeat.Invoke((int)beatTime);
             beathold = beatTime;
         }
-        onBeat.Invoke((int)beatTime);
     }
 }
