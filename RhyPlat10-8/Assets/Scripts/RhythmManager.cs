@@ -18,6 +18,7 @@ public class RhythmManager : MonoBehaviour
         source = GetComponent<AudioSource>();
         source.clip = beat.clip;
         source.Play();
+        source.loop = true;
     }
 
     // Update is called once per frame
